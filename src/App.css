@@ -1,0 +1,148 @@
+/* Base Reset */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 62.5%;
+  font-family: 'Arial', sans-serif;
+  background-color: #f9f9f9;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 1rem 0;
+  background: #fff;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #000;
+  font-size: 1.6rem;
+  padding: 1rem 1.5rem;
+  transition: color 0.3s;
+}
+
+.navbar a:hover {
+  color: #0077ff;
+}
+
+/* Card Grid */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+}
+
+.cardimg {
+  width: 100%;
+  height: auto;
+}
+
+.cardimg img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-bottom: 1px solid #eee;
+}
+
+.card h1 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  text-align: center;
+  padding: 1rem;
+}
+
+/* Detail Page */
+.des {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  background: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.des img {
+  width: 100%;
+  height: auto;
+  max-height: 450px;
+  object-fit: contain;
+  border-radius: 1rem;
+}
+
+.des h1 {
+  font-size: 2.2rem;
+  margin: 1.5rem 0 1rem;
+}
+
+.des p {
+  font-size: 1.4rem;
+  line-height: 2.4rem;
+  color: #333;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  margin-bottom: 1rem;
+}
+
+/* Responsive Typography */
+@media (max-width: 768px) {
+  .navbar a {
+    font-size: 1.4rem;
+  }
+
+  .des h1 {
+    font-size: 1.8rem;
+  }
+
+  .des p {
+    font-size: 1.3rem;
+    line-height: 2.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cards {
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  }
+
+  .des {
+    padding: 1rem;
+  }
+
+  .des h1 {
+    font-size: 1.6rem;
+  }
+
+  .des p {
+    font-size: 1.2rem;
+  }
+}
